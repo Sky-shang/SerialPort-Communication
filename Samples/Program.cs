@@ -30,9 +30,8 @@ namespace Samples
 
             try
             {
-               var a=ModbusSerialRtuMasterReadRegisters();
+                //var a = ModbusSerialRtuMasterReadRegisters();
 
-                //ModbusSocketSerialMasterReadRegisters();
                 //ModbusSocketSerialMasterWriteRegisters();
                 //ModbusSocketSerialMasterReadRegisters();
                 await Task.Run(() => { });
@@ -116,8 +115,6 @@ namespace Samples
         /// </summary>
         public static void ModbusSocketSerialMasterWriteRegisters()
         {
-
-
             using (var sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
             {
 
@@ -142,11 +139,8 @@ namespace Samples
         /// </summary>
         public static void ModbusSocketSerialMasterReadRegisters()
         {
-
-
             using (var sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
             {
-
                 // configure socket
                 var serverIP = IPAddress.Parse("192.168.2.100");
                 var serverFullAddr = new IPEndPoint(serverIP, 9000);

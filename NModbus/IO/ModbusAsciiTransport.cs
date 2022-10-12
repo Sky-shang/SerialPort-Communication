@@ -20,7 +20,7 @@ namespace NModbus.IO
 
         public override byte[] BuildMessageFrame(IModbusMessage message)
         {
-            var msgFrame = message.MessageFrame;
+            var msgFrame = message.MessageFrame; 
 
             var msgFrameAscii = ModbusUtility.GetAsciiBytes(msgFrame);
             var lrcAscii = ModbusUtility.GetAsciiBytes(ModbusUtility.CalculateLrc(msgFrame));
