@@ -4,18 +4,16 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Linq;
 using NModbus;
 using NModbus.Serial;
 using NModbus.Utility;
+using NModbus.Logging;
 
 namespace Samples
 {
-    using System.Linq;
-    using System.Runtime.CompilerServices;
-    using NModbus.Logging;
-
     /// <summary>
-    ///     Demonstration of NModbus
+    /// Demonstration of NModbus
     /// </summary>
     public class Driver
     {
